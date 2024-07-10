@@ -1,10 +1,11 @@
 # N-Queens Visualizer
-![nque](https://github.com/TuShArBhArDwA/N-Queen_Visualizer/assets/116137083/7aa28cc0-fd33-4227-8978-efed779f669e)
+![nq](https://github.com/yaswini2004/N-Queen_Visualiser/assets/112719208/75f860c2-382e-41dd-ac7a-e3ad96d5e023)
+
 
 This project is a visualizer for the N-Queens problem, demonstrating the process of solving the problem using backtracking. It allows users to select the size of the chessboard and visualizes the placement and removal of queens step-by-step.
 
 ## Project Live Link
-[Live Demo](https://yaswini2004.github.io/N-Queen_Visualiser/))
+[Live Demo](https://yaswini2004.github.io/N-Queen_Visualiser/)
 
 
 ## Table of Contents
