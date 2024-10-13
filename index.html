@@ -53,20 +53,29 @@
     <div class="container">
         <h1>N-Queens Visualizer</h1>
         <label for="boardSize">Select Board Size: </label>
-        <input type="number" id="boardSize" min="4" max="20" value="8">
+        <input type="number" id="boardSize" min="1" max="20" value="4">
         <button id="startButton">Start Visualization</button>
         <div id="board" class="board"></div>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            let boardSize = 8;
+            let boardSize = 4;
             const boardElement = document.getElementById('board');
             const boardSizeInput = document.getElementById('boardSize');
             const startButton = document.getElementById('startButton');
 
             boardSizeInput.addEventListener('change', (event) => {
-                boardSize = parseInt(event.target.value);
-                createBoard(boardSize);
+                const inputSize = parseInt(event.target.value);
+                if (inputSize < 1) {
+                    alert('Board size must be at least 1!');
+                    boardSizeInput.value = 1; // Reset to minimum allowed size
+                } else if (inputSize > 20) {
+                    alert('Board size must not exceed 20!');
+                    boardSizeInput.value = 20; // Reset to maximum allowed size
+                } else {
+                    boardSize = inputSize;
+                    createBoard(boardSize);
+                }
             });
 
             startButton.addEventListener('click', startVisualization);
